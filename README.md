@@ -1,2 +1,2 @@
 # plp-class
-powerlearn 
+introduction to mysql week one assignment
