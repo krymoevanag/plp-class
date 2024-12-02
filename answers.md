@@ -1,116 +1,54 @@
+1. State and Explain the Components of a DBMS (Database Management System)
+A DBMS is a software system that manages databases. Its key components include:
 
-# Database Management System (DBMS) Questions and Answers
+Database Engine: Handles data storage, retrieval, and updates by processing user queries.
+Data Definition Language (DDL): Allows users to define database structure, such as tables, schemas, and indexes.
+Data Manipulation Language (DML): Enables data retrieval, insertion, update, and deletion.
+Query Processor: Interprets and executes database queries written in SQL or other query languages.
+Database Schema: Describes the logical structure of the database, including relationships and constraints.
+Transaction Management: Ensures that database transactions are processed reliably and maintain data integrity.
+Data Security and Authorization: Protects data from unauthorized access and ensures controlled access based on user roles.
+2. What is a Relational Database? Give 4 Examples.
+A relational database organizes data into tables with rows (records) and columns (attributes). Relationships between tables are established using keys, making it easy to query and manage data.
+Examples:
 
-## Components of a DBMS (Database Management System)
-1. **Database Engine**  
-   - Responsible for data storage, retrieval, and processing. It uses algorithms to perform CRUD (Create, Read, Update, Delete) operations efficiently.  
-   
-2. **Database Schema**  
-   - Defines the structure, format, and organization of data, including tables, columns, data types, and relationships.  
+MySQL
+PostgreSQL
+Microsoft SQL Server
+Oracle Database
+3. State and Explain Three Classifications of SQL
+SQL can be classified into three main types:
 
-3. **Query Processor**  
-   - Interprets and executes database queries, typically written in SQL, and converts them into actions that the DBMS engine can perform.  
+Data Definition Language (DDL): Used to define database structures. Examples: CREATE, ALTER, DROP.
+Data Manipulation Language (DML): Used for manipulating data within tables. Examples: SELECT, INSERT, UPDATE, DELETE.
+Data Control Language (DCL): Used to control access to the database. Examples: GRANT, REVOKE.
+4. What is the Difference Between a Primary Key and a Foreign Key?
+Primary Key: A unique identifier for each record in a table. It ensures that no duplicate values exist in the column(s) defined as the primary key.
+Foreign Key: A column or set of columns in one table that references the primary key in another table, establishing a relationship between the two tables.
+5. What is an Entity-Relationship Diagram?
+An Entity-Relationship Diagram (ERD) is a visual representation of entities (tables) and their relationships in a database. It uses symbols like rectangles for entities, diamonds for relationships, and ovals for attributes, helping in database design and understanding the data flow.
 
-4. **Transaction Management**  
-   - Ensures database integrity and consistency by managing transactions, supporting features like rollback, commit, and ACID properties.  
+6. What are the Advantages of Relational Databases?
+Data Integrity: Ensures accuracy and consistency of data through constraints like primary keys and foreign keys.
+Scalability: Supports large datasets and can handle complex queries efficiently.
+Flexibility: Easy to add, update, or delete data without affecting the overall structure.
+Security: Role-based access control ensures data protection.
+Data Redundancy Elimination: Normalization reduces duplicate data.
+7. State Four Types of Data Types Used to Store Data in Tables
+Integer: Stores whole numbers (e.g., INT, BIGINT).
+String: Stores text (e.g., VARCHAR, CHAR).
+Date/Time: Stores dates and timestamps (e.g., DATE, TIMESTAMP).
+Decimal/Float: Stores numbers with decimals (e.g., FLOAT, DECIMAL).
+8. What is the Purpose of a Database Management System (DBMS)?
+A DBMS serves as a bridge between users and the database, allowing for efficient storage, retrieval, and management of data. Its purposes include:
 
-5. **Data Storage Management**  
-   - Handles how data is stored on physical media, optimizing storage space and access speed.  
+Data Organization: Provides a structured way to store and manage data.
+Data Security: Restricts unauthorized access to sensitive information.
+Data Integrity: Ensures data accuracy and consistency.
+Data Sharing: Facilitates data sharing among multiple users or applications.
+Backup and Recovery: Ensures data is not lost and can be restored in case of failure.
 
-6. **Database Security**  
-   - Provides mechanisms for data protection, including user authentication, role-based access control, and encryption.  
 
-7. **Concurrency Control**  
-   - Manages simultaneous database access by multiple users to prevent conflicts or inconsistencies.  
 
-8. **Backup and Recovery System**  
-   - Ensures data safety by providing features for regular backups and restoring the database in case of failures.  
 
----
 
-## What is a Relational Database? 
-A **relational database** stores data in structured tables (rows and columns), where relationships between data are established using keys. It uses SQL for query operations. 
-
-**Examples**:  
-1. MySQL  
-2. PostgreSQL  
-3. Oracle Database  
-4. Microsoft SQL Server  
-
----
-
-## Three Classifications of SQL
-1. **Data Definition Language (DDL)**  
-   - Used to define or modify database structures.  
-   - Examples: `CREATE`, `ALTER`, `DROP`, `TRUNCATE`.  
-
-2. **Data Manipulation Language (DML)**  
-   - Handles data manipulation within tables.  
-   - Examples: `SELECT`, `INSERT`, `UPDATE`, `DELETE`.  
-
-3. **Data Control Language (DCL)**  
-   - Manages user access and permissions.  
-   - Examples: `GRANT`, `REVOKE`.  
-
----
-
-## Difference Between a Primary Key and a Foreign Key
-| **Aspect**         | **Primary Key**                                     | **Foreign Key**                                |
-|---------------------|----------------------------------------------------|-----------------------------------------------|
-| **Definition**      | Uniquely identifies a record in a table.           | Links a record in one table to another table. |
-| **Uniqueness**      | Must be unique in the table.                       | Can have duplicate values.                    |
-| **Nullability**     | Cannot contain `NULL` values.                     | Can contain `NULL` values.                    |
-| **Purpose**         | Ensures record uniqueness within a table.          | Maintains referential integrity.              |
-
----
-
-## What is an Entity-Relationship Diagram?
-An **Entity-Relationship Diagram (ERD)** visually represents the entities (objects) in a database, their attributes, and the relationships between them. It is used in database design to model logical data structure.
-
----
-
-## Advantages of Relational Databases
-1. **Data Integrity**  
-   - Ensures accuracy and consistency of data through constraints.  
-
-2. **Flexibility**  
-   - Supports dynamic queries and schema modifications.  
-
-3. **Data Relationships**  
-   - Uses keys to define and enforce relationships.  
-
-4. **Scalability**  
-   - Can handle large amounts of data efficiently.  
-
-5. **Security**  
-   - Provides robust mechanisms for access control and data encryption.  
-
----
-
-## Four Types of Data Types in Tables
-1. **Integer**: Stores whole numbers (e.g., `INT`, `BIGINT`).  
-2. **String**: Stores text (e.g., `VARCHAR`, `CHAR`).  
-3. **Date/Time**: Stores date and time values (e.g., `DATE`, `TIMESTAMP`).  
-4. **Boolean**: Stores `TRUE` or `FALSE` values.  
-
----
-
-## Purpose of a Database Management System (DBMS)
-The purpose of a DBMS is to:
-1. **Store and Organize Data**  
-   - Provides structured storage for efficient access.  
-
-2. **Ensure Data Security**  
-   - Controls user access and protects data from unauthorized use.  
-
-3. **Support Data Integrity**  
-   - Maintains accuracy and consistency in data through validation and constraints.  
-
-4. **Facilitate Data Sharing**  
-   - Enables multiple users to access data simultaneously.  
-
-5. **Provide Scalability**  
-   - Handles increasing amounts of data effectively.  
-
-6. **Enable Backup and Recovery**  
-   - Protects data from loss and restores it after failures.  
